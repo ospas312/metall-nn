@@ -6,6 +6,8 @@ import { useState } from "react";
 import { Badge } from "@/shared/ui/badge";
 import { Button } from "@/shared/ui/button";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const filters = [
   ["all", "Все проекты"],
   ["canopy", "Навесы"],
@@ -39,7 +41,7 @@ const projects: readonly Project[] = [
     material: "Поликарбонат 10 мм",
     steel: "≈ 1 240 кг",
     year: "2026",
-    image: "/portfolio/arched-carport.webp",
+    image: `${basePath}/portfolio/arched-carport.webp`,
     tone: "lime",
     featured: true,
   },
@@ -53,7 +55,7 @@ const projects: readonly Project[] = [
     material: "Профильная труба",
     steel: "≈ 460 кг",
     year: "2026",
-    image: "/portfolio/steel-staircase.webp",
+    image: `${basePath}/portfolio/steel-staircase.webp`,
     tone: "orange",
   },
   {
@@ -66,7 +68,7 @@ const projects: readonly Project[] = [
     material: "Металлочерепица",
     steel: "≈ 680 кг",
     year: "2025",
-    image: "/portfolio/garden-gazebo.webp",
+    image: `${basePath}/portfolio/garden-gazebo.webp`,
     tone: "blue",
   },
   {
@@ -79,7 +81,7 @@ const projects: readonly Project[] = [
     material: "Профнастил 0,5 мм",
     steel: "≈ 720 кг",
     year: "2025",
-    image: "/portfolio/lean-to-canopy.webp",
+    image: `${basePath}/portfolio/lean-to-canopy.webp`,
     tone: "steel",
   },
 ];

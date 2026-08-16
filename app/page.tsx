@@ -3,6 +3,8 @@ import { CanopyConfigurator } from "@/features/canopy-configurator";
 import { PortfolioSection } from "@/features/portfolio";
 
 export default function HomePage() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
   return (
     <main id="top">
       <header className="site-header">
@@ -20,7 +22,7 @@ export default function HomePage() {
 
       <section className="showcase-banner" aria-label="Инженерный баннер МЕТАЛЛ.НН">
         <Image
-          src="/og.png"
+          src={`${basePath}/og.png`}
           alt="Арочный металлический навес с инженерными размерами"
           width={1792}
           height={919}
